@@ -2,19 +2,11 @@ public class Assignment {
 
 
   public static void main(String[] args) {
-    Food rice = new Food();
-    System.out.println(rice.food("rice",20,5,10));
-    Food beans = new Food();
-    System.out.println(beans.food("beans",10,2,30));
-   /* if (miles > 5 && miles <= 15) {
-      System.out.println(total + 2);
-    } else if (miles > 16 && miles <= 25) {
-      System.out.println(total + 10);
-    } else if (miles > 26 && miles <= 50) {
-      System.out.println(total + 15);
-    } else {
-      System.out.println(total + 20);
-    */
+    Food product1 = new Food();
+    System.out.println(product1.food("rice",20,5,10));
+    Food product2 = new Food();
+    System.out.println(product2.food("beans",10,2,30));
+
     // 5 - 15 miles  = $5
     //16 - 25 miles  = $10
     //26 - 50	miles  = $15

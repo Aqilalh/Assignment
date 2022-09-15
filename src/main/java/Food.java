@@ -1,35 +1,38 @@
 public class Food {
-    // int miles = 0;
-    double miles = 100;
-    double fee;
-
     String product;
     double price;
     int Qty;
+    int miles;
 
-    public double Food(String product, int qty, double price, double miles) {
+    public String food(String product, int Qty, double price, int miles) {
         this.product = product;
         this.price = price;
-        this.Qty = qty;
-        this.miles = miles;
-
+        this.Qty = Qty;
+        double total = 0;
         for (int i = 0; i < miles; i++) {
-            if (i >= 4) {
-                System.out.println(fee = 2);
+            if (miles <= 4){
+               total = Qty * price + 2;
+            } else if (miles > 5 && miles <= 15) {
+                total = Qty * price + 5;
+            } else if (miles > 16 && miles <= 25) {
+                total = Qty * price + 10;
+            } else if (miles > 26 && miles <= 50) {
+                total = Qty * price + 15;
             } else {
-                if (i >= 5 && i <= 15) {
-                    System.out.println(fee = 5);
-                } else if (i >= 16 && i <= 25) {
-                    System.out.println(fee = 10);
-                } else if (i >= 26 && i <= 50) {
-                    System.out.println(fee = 15);
-                } else if (i >= 50) {
-                    System.out.println(fee = 20);
-                }
+                total = Qty * price + 20;
             }
-
         }
-
-        return total;
+        return "product :" + product + "\n" + "Qty :" + Qty + "\n" + "price :" + price + "\n" + "miles :" + miles + "\n" + "==========" + "\n"+ "total:" + total;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
